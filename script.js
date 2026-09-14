@@ -74,40 +74,40 @@ startButton.addEventListener("click", function() {
         }
 
         if (timeLeft <= 0) {
-            clearInterval(timer);
+    clearInterval(timer);
 
-            gameRunning = false;
-            target.style.display = "none";
+    gameRunning = false;
+    target.style.display = "none";
 
-            gameStats.style.display = "none";
-            document.querySelector(".difficulty").style.display = "none";
+    gameStats.style.display = "none";
+    document.querySelector(".difficulty").style.display = "none";
 
-            let newBest = false;
+    timeText.classList.remove("warning");
 
-            if (score > bestScore) {
-                bestScore = score;
-                bestText.textContent = bestScore;
+    let newBest = false;
 
-                localStorage.setItem("bestScore", "0");
-                localStorage.reload();
-           
-                newBest = true;
-            }
+    if (score > bestScore) {
+        bestScore = score;
+        bestText.textContent = bestScore;
 
-            if (newBest === true) {
-                messageTitle.textContent = "New Best!";
-                messageText.textContent = "New high score: " + score;
-            }
-            else {
-                messageTitle.textContent = "Game Over!";
-                messageText.textContent = "Your Score: " + score;
-            }
+        localStorage.setItem("bestScore", bestScore);
 
-            gameMessage.style.display = "flex";
+        newBest = true;
+    }
 
-            startButton.textContent = "Play Again";
-            startButton.style.display = "inline-block";
-        }
+    if (newBest === true) {
+        messageTitle.textContent = "New Best!";
+        messageText.textContent = "New high score: " + score;
+    } else {
+        messageTitle.textContent = "Game Over!";
+        messageText.textContent = "Your score: " + score;
+    }
+
+    gameMessage.style.display = "flex";
+
+    startButton.textContent = "Play Again";
+    startButton.style.display = "inline-block";
+}
     }, 1000);
 });
 
