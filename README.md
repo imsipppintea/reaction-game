@@ -2,6 +2,10 @@
 
 A browser-based reaction game created with HTML, CSS and JavaScript.
 
+## Live Demo
+
+[Play Reaction Game](https://imsipppintea.github.io/reaction-game/)
+
 ## How to Play
 
 1. Press Start Game.
