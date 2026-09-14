@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Reaction Game</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="game-container">
+            
+            <h1>Reaction Game</h1>
+
+            <div class="best-box">
+                Best: <span id="best">0</span>
+            </div>
+
+            <div class="game-stats">
+                <p>Score: <span id="score">0</span></p>
+                <p>Time: <span id="time">30</span></p>
+            </div>
+
+            <p class="difficulty">
+                Difficulty: <span id="difficulty">Easy</span>
+            </p>
+
+            <button id="startButton">Start Game</button>
+
+            <div id="gameArea">
+
+                <div id="gameMessage">
+                    <h2 id="messageTitle">How to Play</h2>
+
+                    <p id="messageText">
+                        Click the target as many times as you can in 30 seconds.
+                        The target becomes smaller as the difficulty increases.
+                    </p>
+                </div>
+                
+                <div id="target"></div>
+                
+            </div>
+
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
